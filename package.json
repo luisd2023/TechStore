@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "description": " a simple api for products",
   "main": "index.js",
-  "type": "module".
   "scripts": {
     "build": "babel src --out-dir build && ncp src/views build/views",
     "dev": "src/index.js --exec babel-node",
-    "start": "node src/index.js"
+    "start-tw": "npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "start": "node build/index.js"
   },
   "keywords": [],
   "author": "Sammyr Recuay Parra",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.22.5",
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
