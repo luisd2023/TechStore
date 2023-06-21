@@ -7,7 +7,7 @@
     "build": "babel src --out-dir build && ncp src/views build/views",
     "dev": "src/index.js --exec babel-node",
     "start-tw": "npx tailwindcss -i ./src/input.css -o ./dist/output.css",
-    "start": "node build/index.js"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "Sammyr Recuay Parra",
