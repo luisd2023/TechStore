@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir build && ncp src/views build/views",
-    "dev": "nodemon  src/index.js --exec babel-node",
+    "dev": "src/index.js --exec babel-node",
     "start-tw": "npx tailwindcss -i ./src/input.css -o ./dist/output.css",
-    "start": "nodemon build/index.js"
+    "start": "node build/index.js"
   },
   "keywords": [],
   "author": "Sammyr Recuay Parra",
