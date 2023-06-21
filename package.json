@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": " a simple api for products",
   "main": "index.js",
+  "type": "module".
   "scripts": {
     "build": "babel src --out-dir build && ncp src/views build/views",
     "dev": "src/index.js --exec babel-node",
