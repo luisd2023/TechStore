@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.hbs"],
-  content: ["./src/**/*.{html,js,hbs}", "./views/*.hbs"],
+  content: ["./build/**/*.{html,js,hbs}","./src/**/*.{html,js,hbs}" "./views/*.hbs,html,js"],
   theme: {
     extend: {},
   },
