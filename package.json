@@ -4,7 +4,7 @@
   "description": " a simple api for products",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir build && ncp src/views build/views",
+    "build": "babel src --out-dir build && ncp src/views build/views && ncp src/output.css build/output.css",
     "dev": "nodemon src/index.js --exec babel-node",
     "start-tw": "npx tailwindcss -i ./src/config/input.css -o ./src/output.css --minify",
     "start": "node build/index.js"
