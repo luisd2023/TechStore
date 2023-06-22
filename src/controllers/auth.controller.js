@@ -1,7 +1,7 @@
 import User from "../models/User";
 import Role from "../models/Role";
 import jwt from "jsonwebtoken";
-import config from "../config";
+import { SECRET } from "../config";
 
 export const signUp = async (req, res) => {
   const { username, email, password, roles, confirm_password } = req.body;
@@ -39,7 +39,7 @@ export const signUp = async (req, res) => {
     }
     const savedUser = await newUser.save();
 
-    const token = jwt.sign({ id: savedUser._id }, config.SECRET, {
+    const token = jwt.sign({ id: savedUser._id }, SECRET, {
       expiresIn: 86400, //24 hours
     });
 
