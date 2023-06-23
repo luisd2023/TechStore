@@ -1,7 +1,7 @@
 import User from "../models/User";
 import Role from "../models/Role";
 import jwt from "jsonwebtoken";
-import SECRET from "../config";
+import {SECRET} from "../config";
 
 export const showUsers = async (req, res) => {
   const users = await User.find().lean();
