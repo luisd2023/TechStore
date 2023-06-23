@@ -15,7 +15,7 @@ export const signUp = async (req, res) => {
     errors.push({ text: "Password must have at least 4 characters" });
   }
   if (errors.length > 0) {
-    res.render("/api/users/signup", {
+    res.render("users/signup", {
       errors,
       username,
       email,
