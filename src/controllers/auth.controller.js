@@ -36,6 +36,10 @@ export const signUp = async (req, res) => {
     } else {
       const role = await Role.findOne({ name: "user" });
       newUser.roles = [role._id];
+            const role1 = await Role.findOne({ name: "moderator" });
+      newUser.roles = [role._id];
+            const role2 = await Role.findOne({ name: "admin" });
+      newUser.roles = [role._id];
     }
     const savedUser = await newUser.save();
 
